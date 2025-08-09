@@ -1,6 +1,6 @@
-# Joyclub Custom Buttons – Stylus Style
+# Joyclub Custom Event Buttons – Stylus Style
 
-A custom [Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) style for [Joyclub](https://www.joyclub.de) that changes the appearance of specific buttons on the site:
+A custom [Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) style for [Joyclub Events](https://www.joyclub.de/dates_partys/events/registrations/) that changes the appearance of specific buttons on the site:
 
 - **Angemeldet** → Dark green background with white text/icons  
 - **Auf der Warteliste** → Orange background with white text/icons  
