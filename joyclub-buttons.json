@@ -1,9 +1,9 @@
 @-moz-document domain("joyclub.de"), domain("www.joyclub.de") {
-/* Joyclub — custom button colors */
+/* Joyclub — custom button colors (safe selectors, no :contains) */
 
 
 
-  /* 1) Angemeldet — darker green */
+  /* 1) Angemeldet — darker green (tick icon, no .btn-text) */
   j-button:has(.glyphicons-tick):not(:has(.btn-text)) {
     background-color: #0f6d2f !important;
     color: #fff !important;
@@ -15,7 +15,19 @@
     fill: currentColor !important;
   }
 
-  /* 2) Auf der Warteliste — orange */
+  /* 1b) Angemeldet — plain text link-to-tab (no icon) */
+  j-button.link_to_tab[variant="secondary"][href="#tr_event_anmeldung_information"]:not(:has(.btn-text)) {
+    background-color: #0f6d2f !important;
+    color: #fff !important;
+    border-color: #0d5e28 !important;
+    border-radius: 8px !important;
+  }
+  j-button.link_to_tab[variant="secondary"][href="#tr_event_anmeldung_information"]:not(:has(.btn-text)) * {
+    color: #fff !important;
+    fill: currentColor !important;
+  }
+
+  /* 2) Auf der Warteliste — orange (stopwatch icon) */
   j-button:has(.glyphicons-stopwatch) {
     background-color: #d97706 !important;
     color: #fff !important;
@@ -27,25 +39,53 @@
     fill: currentColor !important;
   }
 
-  /* 3) Event gemerkt — keep text, draw a 4px green border INSIDE using ::after */
+  /* 2b) Auf der Warteliste — plain text link-to-tab (no icon) */
+  j-button.link_to_tab[variant="secondary"][href="#jetzt_anmelden"]:not(:has(.btn-text)) {
+    background-color: #d97706 !important;
+    color: #fff !important;
+    border-color: #b45309 !important;
+    border-radius: 8px !important;
+  }
+  j-button.link_to_tab[variant="secondary"][href="#jetzt_anmelden"]:not(:has(.btn-text)) * {
+    color: #fff !important;
+    fill: currentColor !important;
+  }
+
+  /* 3) Event gemerkt — tick icon + .btn-text (old case) */
   j-button:has(.glyphicons-tick):has(.btn-text) {
-    position: relative !important;             /* anchor the pseudo-element */
-    border-radius: 8px !important;             /* keep original radius */
-    /* no background/border changes here */
+    position: relative !important;
+    border-radius: 8px !important;
   }
   j-button:has(.glyphicons-tick):has(.btn-text)::after {
     content: "" !important;
     position: absolute !important;
-    inset: 0 !important;                        /* fits exactly over the button */
-    border: 4px solid #0f6d2f !important;       /* 4px green ring */
-    border-radius: 8px !important;              /* match the button radius */
-    pointer-events: none !important;            /* don’t block clicks */
-    box-sizing: border-box !important;          /* keep ring thickness consistent */
+    inset: 0 !important;
+    border: 4px solid #0f6d2f !important;
+    border-radius: 8px !important;
+    pointer-events: none !important;
+    box-sizing: border-box !important;
   }
 
-  /* Optional hovers */
+  /* 3b) Event gemerkt — plain text, js_submit_bookmark_form */
+  j-button.js_submit_bookmark_form[variant="secondary"] {
+    position: relative !important;
+    border-radius: 8px !important;
+  }
+  j-button.js_submit_bookmark_form[variant="secondary"]::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    border: 4px solid #0f6d2f !important;
+    border-radius: 8px !important;
+    pointer-events: none !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Hover effects for green/orange backgrounds */
   j-button:has(.glyphicons-tick):not(:has(.btn-text)):hover,
-  j-button:has(.glyphicons-stopwatch):hover {
+  j-button.link_to_tab[variant="secondary"][href="#tr_event_anmeldung_information"]:not(:has(.btn-text)):hover,
+  j-button:has(.glyphicons-stopwatch):hover,
+  j-button.link_to_tab[variant="secondary"][href="#jetzt_anmelden"]:not(:has(.btn-text)):hover {
     filter: brightness(0.95) !important;
   }
 }
