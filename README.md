@@ -6,6 +6,10 @@ A custom [Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeeb
 - **Auf der Warteliste** → Orange background
 - **Event gemerkt** → Add a 4 px green border to the button  
 
+## Preview
+
+![Preview of custom Joyclub buttons](images/buttons.png)
+
 ## Installation
 
 1. Install the [Stylus browser extension from the Chrome Web Store](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne).  
