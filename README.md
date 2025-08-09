@@ -2,9 +2,9 @@
 
 A custom [Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) style for [Joyclub Events](https://www.joyclub.de/dates_partys/events/registrations/) that changes the appearance of specific buttons on the site:
 
-- **Angemeldet** → Dark green background with white text/icons  
-- **Auf der Warteliste** → Orange background with white text/icons  
-- **Event gemerkt** → Original background with a 4 px green border drawn inside the button  
+- **Angemeldet** → Dark green background
+- **Auf der Warteliste** → Orange background
+- **Event gemerkt** → Add a 4 px green border to the button  
 
 ## Installation
 
