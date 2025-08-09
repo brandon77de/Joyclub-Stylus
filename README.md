@@ -1,6 +1,6 @@
 # Joyclub Custom Buttons – Stylus Style
 
-A custom [Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) style for Joyclub that changes the appearance of specific buttons:
+A custom [Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne) style for [Joyclub](https://www.joyclub.de) that changes the appearance of specific buttons on the site:
 
 - **Angemeldet** → Dark green background with white text/icons  
 - **Auf der Warteliste** → Orange background with white text/icons  
@@ -14,3 +14,7 @@ A custom [Stylus](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeeb
 4. Click **Import** in the left-hand menu.  
 5. Select the downloaded `joyclub-buttons.json` file.  
 6. Enable the imported style.
+
+## Compatibility
+
+This style is designed **specifically for** [https://www.joyclub.de](https://www.joyclub.de) and will not affect other websites.
