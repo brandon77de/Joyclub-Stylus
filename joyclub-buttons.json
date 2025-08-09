@@ -1,0 +1,51 @@
+@-moz-document domain("joyclub.de"), domain("www.joyclub.de") {
+/* Joyclub — custom button colors */
+
+
+
+  /* 1) Angemeldet — darker green */
+  j-button:has(.glyphicons-tick):not(:has(.btn-text)) {
+    background-color: #0f6d2f !important;
+    color: #fff !important;
+    border-color: #0d5e28 !important;
+    border-radius: 8px !important;
+  }
+  j-button:has(.glyphicons-tick):not(:has(.btn-text)) * {
+    color: #fff !important;
+    fill: currentColor !important;
+  }
+
+  /* 2) Auf der Warteliste — orange */
+  j-button:has(.glyphicons-stopwatch) {
+    background-color: #d97706 !important;
+    color: #fff !important;
+    border-color: #b45309 !important;
+    border-radius: 8px !important;
+  }
+  j-button:has(.glyphicons-stopwatch) * {
+    color: #fff !important;
+    fill: currentColor !important;
+  }
+
+  /* 3) Event gemerkt — keep text, draw a 4px green border INSIDE using ::after */
+  j-button:has(.glyphicons-tick):has(.btn-text) {
+    position: relative !important;             /* anchor the pseudo-element */
+    border-radius: 8px !important;             /* keep original radius */
+    /* no background/border changes here */
+  }
+  j-button:has(.glyphicons-tick):has(.btn-text)::after {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;                        /* fits exactly over the button */
+    border: 4px solid #0f6d2f !important;       /* 4px green ring */
+    border-radius: 8px !important;              /* match the button radius */
+    pointer-events: none !important;            /* don’t block clicks */
+    box-sizing: border-box !important;          /* keep ring thickness consistent */
+  }
+
+  /* Optional hovers */
+  j-button:has(.glyphicons-tick):not(:has(.btn-text)):hover,
+  j-button:has(.glyphicons-stopwatch):hover {
+    filter: brightness(0.95) !important;
+  }
+}
